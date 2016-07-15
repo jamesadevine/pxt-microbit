@@ -50,7 +50,7 @@ basic.clearScreen()
 It's a syntax error to have a left parenthesis without the "closing" right parenthesis:
 
 ```typescript
-basic.clearScreen(
+basic.clearScreen()
 ```
 
 ### ~button /js/sequence
