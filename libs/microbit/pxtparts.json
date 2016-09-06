@@ -49,9 +49,9 @@
         },
         "assemblyStep": 0,
         "wires": [
-            {"start": ["breadboard", "j", 1], "end": "ground", "color": "blue", "assemblyStep": 1},
+            {"start": ["breadboard", "j", 3], "end": "ground", "color": "blue", "assemblyStep": 1},
             {"start": ["breadboard", "j", 2], "end": "threeVolt", "color": "red", "assemblyStep": 2},
-            {"start": ["breadboard", "j", 3], "end": ["GPIO", 0], "color": "green", "assemblyStep": 2}
+            {"start": ["breadboard", "j", 1], "end": ["GPIO", 0], "color": "green", "assemblyStep": 2}
         ]
     },
     "speaker": {
