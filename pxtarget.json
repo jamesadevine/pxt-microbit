@@ -52,13 +52,15 @@
             },
             "description": "",
             "files": [
+                "main.blocks",
                 "main.ts",
                 "README.md"
             ]
         },
         "files": {
             "main.ts": "basic.showLeds(`\r\n    . . . . .\r\n    . # . # .\r\n    . . . . .\r\n    # . . . #\r\n    . # # # .\r\n    `);",
-            "README.md": ""
+            "README.md": "",
+            "main.blocks": ""
         }
     },
     "compile": {
