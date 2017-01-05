@@ -71,8 +71,7 @@
         "loopsBlocks": true,
         "logicBlocks": true,
         "variablesBlocks": true,
-        "onStartColor": "#0078D7",
-        "onStartNamespace": "basic"
+        "onStartColor": "#0078D7"
     },
     "simulator": {
         "autoRun": true,
