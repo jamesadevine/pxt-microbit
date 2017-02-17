@@ -1,8 +1,19 @@
+/// <reference path="../../node_modules/pxt-core/built/pxtlib.d.ts"/>
+
 namespace pxsim.visuals {
 
     let track = function(id: string, state:string, extra?: any)
     {
-        window.parent.postMessage(new pxt.analytics.TrackedEvent("analytics", {id: id, state: state, extra: (extra) ? extra : null}), "*");
+        let obj = {
+            type: "analytics",
+            data: {
+                id: id,
+                state: state,
+                extra: (extra) ? extra : null
+            }
+        }
+
+        window.parent.postMessage(obj, "*");
     }
 
     let mapper = function(id: number) : string
@@ -878,7 +889,7 @@ namespace pxsim.visuals {
                 btn.addEventListener(pointerEvents.down, ev => {
                     let state = this.board;
                     stateButtons[index].pressed = true;
-                    
+
                     track(mapper(stateButtons[index].id),"DOWN");
                     svg.fill(this.buttons[index], this.props.theme.buttonDown);
                 })
@@ -897,7 +908,7 @@ namespace pxsim.visuals {
                 })
             })
             this.buttonsOuter[2].addEventListener(pointerEvents.down, ev => {
-                
+
                 let state = this.board;
                 stateButtons[0].pressed = true;
                 stateButtons[1].pressed = true;
