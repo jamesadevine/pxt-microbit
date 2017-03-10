@@ -164,7 +164,7 @@ namespace input {
      * @param name the pin that needs to be released, eg: TouchPin.P0
      * @param body the code to run when the pin is released
      */
-    //% help=input/on-pin-released weight=6 blockGap=8
+    //% help=input/on-pin-released weight=53 blockGap=8
     //% blockId=device_pin_released block="on pin %NAME|released"
     //% advanced=true
     void onPinReleased(TouchPin name, Action body) {
@@ -212,7 +212,7 @@ namespace input {
         double y = uBit.accelerometer.getY();
         double z = uBit.accelerometer.getZ();
         return (int)sqrt(x*x+y*y+z*z);
-    }    
+    }
 
     /**
      * Get the acceleration value in milli-gravitys (when the board is laying flat with the screen up, x=0, y=0 and z=-1024)
