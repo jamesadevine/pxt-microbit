@@ -119,7 +119,7 @@ namespace input {
      * @param button the button that needs to be pressed
      * @param body code to run when event is raised
      */
-    //% help=input/on-button-pressed weight=85 blockGap=8
+    //% help=input/on-button-pressed weight=54 blockGap=8
     //% blockId=device_button_event block="on button|%NAME|pressed"
     //% parts="buttonpair"
     void onButtonPressed(Button button, Action body) {
@@ -131,7 +131,7 @@ namespace input {
      * @param gesture the type of gesture to track, eg: Gesture.Shake
      * @param body code to run when gesture is raised
      */
-    //% help=input/on-gesture weight=84 blockGap=8
+    //% help=input/on-gesture weight=53 blockGap=8
     //% blockId=device_gesture_event block="on |%NAME"
     //% parts="accelerometer"
     void onGesture(Gesture gesture, Action body) {
@@ -148,7 +148,7 @@ namespace input {
      * @param name the pin that needs to be pressed, eg: TouchPin.P0
      * @param body the code to run when the pin is pressed
      */
-    //% help=input/on-pin-pressed weight=83
+    //% help=input/on-pin-pressed weight=52
     //% blockId=device_pin_event block="on pin %name|pressed"
     void onPinPressed(TouchPin name, Action body) {
         auto pin = getPin((int)name);
@@ -164,7 +164,7 @@ namespace input {
      * @param name the pin that needs to be released, eg: TouchPin.P0
      * @param body the code to run when the pin is released
      */
-    //% help=input/on-pin-released weight=6 blockGap=8
+    //% help=input/on-pin-released weight=4 blockGap=8
     //% blockId=device_pin_released block="on pin %NAME|released"
     //% advanced=true
     void onPinReleased(TouchPin name, Action body) {
@@ -212,7 +212,7 @@ namespace input {
         double y = uBit.accelerometer.getY();
         double z = uBit.accelerometer.getZ();
         return (int)sqrt(x*x+y*y+z*z);
-    }    
+    }
 
     /**
      * Get the acceleration value in milli-gravitys (when the board is laying flat with the screen up, x=0, y=0 and z=-1024)
